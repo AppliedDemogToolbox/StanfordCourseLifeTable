@@ -3,7 +3,7 @@
 ##THE ORIGINAL POSTING OF THIS CODE IS AVAILABLE AT: http://www.stanford.edu/group/heeh/cgi-bin/web/node/75
 ##
 ##NOTE: I (EDDIE HUNSINGER) REPRODUCED THE CODE HERE TO PROVIDE AN IMMEDIATE LINK TO INPUT DATA FOR QUICK REVIEW BY POTENTIAL USERS, BUT I DID NOT AUTHOR THIS CODE
-##FEBRUARY 2011 (LAST UPDATED FEBRUARY 2018)
+##FEBRUARY 2011 (LAST UPDATED DECEMBER 2018)
 ##edyhsgr@gmail.com
 ##
 ##IF YOU WOULD LIKE TO USE, SHARE OR REPRODUCE THIS CODE, BE SURE TO CITE THE SOURCE
@@ -17,7 +17,7 @@
 #STEP 1: Read in and review the population and death data
 ##############################################################################################################################
 
-females<-read.table(file="http://www.demog.berkeley.edu/~eddieh/AppliedDemographyToolbox/StanfordCourseLifeTable/StanfordCourseMortalityData.csv",header=TRUE,sep=",")
+females<-read.table(file="https://github.com/AppliedDemogToolbox/StanfordCourseLifeTable/raw/master/StanfordCourseMortalityData.csv",header=TRUE,sep=",")
 females
 
 ##############################################################################################################################
