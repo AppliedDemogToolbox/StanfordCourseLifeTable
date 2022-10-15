@@ -1,10 +1,13 @@
 ##############################################################################################################################
-##R CODE FOR A PERIOD LIFE TABLE, REPRODUCED FROM ONLINE MATERIALS FOR THE 2006 FORMAL DEMOGRAPHY WORKSHOP AT STANFORD UNIVERSITY
-##THE ORIGINAL POSTING OF THIS CODE IS AVAILABLE AT: http://www.stanford.edu/group/heeh/cgi-bin/web/node/75
+##R CODE FOR A PERIOD LIFE TABLE, REPRODUCED FROM ONLINE MATERIALS FOR A 2006 FORMAL DEMOGRAPHY WORKSHOP AT STANFORD UNIVERSITY
+##THE ORIGINAL POSTING OF THIS CODE IS AVAILABLE AT: 	http://www.stanford.edu/group/heeh/cgi-bin/web/node/75 
+##									https://web.archive.org/web/20170209225451/http://web.stanford.edu/group/heeh/cgi-bin/web/node/75
 ##
 ##NOTE: I (EDDIE HUNSINGER) REPRODUCED THE CODE HERE TO PROVIDE AN IMMEDIATE LINK TO INPUT DATA FOR QUICK REVIEW BY POTENTIAL USERS, BUT I DID NOT AUTHOR THIS CODE
-##FEBRUARY 2011 (LAST UPDATED DECEMBER 2018)
+##FEBRUARY 2011 (LAST UPDATED OCTOBER 2022)
 ##edyhsgr@gmail.com
+##
+##A PYTHON (USING JUPYTER NOTEBOOK) VERSION OF THE CODE, I ADDED IN OCTOBER 2022, IS AVAILABLE AT:  
 ##
 ##IF YOU WOULD LIKE TO USE, SHARE OR REPRODUCE THIS CODE, BE SURE TO CITE THE SOURCE
 ##
@@ -41,12 +44,12 @@ b0 <- 0.07;   b1<- 1.7;
 nmax <- length(x)
 #nMx = nDx/nKx   
 n <- c(diff(x),999)          		#width of the intervals
-nax <- n / 2;		            	# default to .5 of interval
+nax <- n / 2;		            # default to .5 of interval
 nax[1] <- b0 + b1 *nMx[1]    		# from Keyfitz & Flieger(1968)
-nax[2] <- 1.5  ;              
+nax[2] <- ifelse(n[2]==4,1.5,nax[2])  ;           #EddieH note: modified to ifelse to include complete (single-year) tables - October 2022  
 nax[nmax] <- 1/nMx[nmax] 	  	# e_x at open age interval
 nqx <- (n*nMx) / (1 + (n-nax)*nMx)
-nqx<-ifelse( nqx > 1, 1, nqx);		# necessary for high nMx
+nqx<-ifelse( nqx > 1, 1, nqx);	# necessary for high nMx
 nqx[nmax] <- 1.0
 lx <- c(1,cumprod(1-nqx)) ;  		# survivorship lx
 lx <- lx[1:length(nMx)]
