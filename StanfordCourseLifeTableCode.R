@@ -1,7 +1,7 @@
 ##############################################################################################################################
 ##R CODE FOR A PERIOD LIFE TABLE, REPRODUCED FROM ONLINE MATERIALS FOR A 2006 FORMAL DEMOGRAPHY WORKSHOP AT STANFORD UNIVERSITY
 ##THE ORIGINAL POSTING OF THIS CODE IS AVAILABLE AT: 	http://www.stanford.edu/group/heeh/cgi-bin/web/node/75 
-##									https://web.archive.org/web/20170209225451/http://web.stanford.edu/group/heeh/cgi-bin/web/node/75
+##				https://web.archive.org/web/20170209225451/http://web.stanford.edu/group/heeh/cgi-bin/web/node/75
 ##
 ##NOTE: I (EDDIE HUNSINGER) REPRODUCED THE CODE HERE TO PROVIDE AN IMMEDIATE LINK TO INPUT DATA FOR QUICK REVIEW BY POTENTIAL USERS, BUT I DID NOT AUTHOR THIS CODE
 ##FEBRUARY 2011 (LAST UPDATED OCTOBER 2022)
